@@ -1,5 +1,21 @@
 #!/bin/bash
+#
+# Script Name: vdi_copy.sh
+# Description: Copies and migrates all VDIs of a XCP-NG VM to another SR.
 # Usage: ./vdi_copy.sh <VM_NAME> <TARGET_SR_UUID>
+# Example: ./vdi_copy.sh "ubuntu-test" 1234abcd-5678-efgh-9101-ijklmnop
+#
+# Author: Yosuef Asjody
+# Version: 1.0
+# Date: 2025-11-12
+#
+# Requirements:
+#   - XenServer CLI (xe) installed and configured
+#   - User must have permissions to manage VMs and SRs
+#
+# Notes:
+#   - Script shuts down the VM before migration.
+#   - Original VDIs are renamed with “[old]” suffix after copying.
 
 set -e
 
