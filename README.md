@@ -1,3 +1,3 @@
 # bash_helpers
 
-A collection of helpful bash scripts and functions.
+Some bash scripts to make engineers' life easier
